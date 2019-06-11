@@ -1,3 +1,12 @@
+Hi Hatchways Team! Sorry this is so late, I ended up being incredibly busy after starting the tech challenge and also decided to use this test as an opportunity to learn how to manage state in React using hooks.
+
+In order to run the app you'll have to npm install the dependencies and then below you'll find the instructions to view the app in the browser.
+
+I also actually just applied for a jr. position at Hatchways itself so I'm really hoping to hear back!
+
+All the best,
+Dennis McLeod
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

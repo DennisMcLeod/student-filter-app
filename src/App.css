@@ -1,33 +1,173 @@
+@import "setup.css";
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+li {
+  list-style: none;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #efefef;
+  font-size: 1.6rem;
+}
+
+.wrapper {
+  width: 60%;
+  height: 650px;
+  overflow-y: scroll;
+  scrollbar-width: 0px;
+  scrollbar-width: none;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.356);
+  position: relative;
+}
+
+.wrapper::-webkit-scrollbar {
+  display: none;
+}
+.studentContainer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.studentProfile {
+  display: flex;
+}
+
+.studentContainer:nth-of-type(2) .studentProfile {
+  padding-top: 130px;
+}
+
+.studentImageSection {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.studentImageSection img {
+  width: 60%;
+  border: 1px solid rgba(99, 2, 2, 0.25);
+  border-radius: 50%;
+}
+
+.studentInfoSection {
+  width: 75%;
+  padding: 10px;
+  position: relative;
+}
+
+.studentInfoSection p {
+  margin: 0;
+  padding: 0px 0px 5px 20px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.studentInfoSection h2 {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.filterBarForm {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filterWrapper {
+  position: fixed;
+  width: inherit;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 20px 20px 0 0;
+  z-index: 100;
+}
+
+.filterBar:focus-within {
+  border-bottom: none;
+}
+
+.filterInput {
+  font-size: 2rem;
+  padding: 20px;
+  width: 98%;
+  border: none;
+  border-radius: 20px 20px 0 0;
+}
+
+.filterInput:focus {
+  border-bottom: 2px solid black;
+}
+
+.noFilterResults {
+  padding-top: 200px;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.show,
+.hide {
+  font-size: 5rem;
+  font-weight: bold;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hide {
+  right: 18px;
+}
+
+.testName {
+  padding-right: 20px;
+}
+
+.addTagInput {
+  border: none;
+  margin-bottom: 15px;
+  padding: 3px;
+  border-bottom: 2px solid black;
+  width: 120px;
+}
+
+.tags {
+  min-height: 50px;
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.tag {
+  padding: 10px;
+  text-align: center;
+  background-color: #dfdfdf;
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.expandedSection {
+  width: 75%;
+  margin-right: 0;
+  margin-left: auto;
+  padding-left: 30px;
 }
